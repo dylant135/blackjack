@@ -1,21 +1,25 @@
 const cards = [
     {
         cardName: 'aceClub',
+        ace: true,
         value: 11,
         url: '/images/aceClubs.png'
       },
       {
         cardName: 'aceHeart',
+        ace: true,
         value: 11,
         url: '../images/aceHearts.png'
       },
       {
         cardName: 'aceSpade',
+        ace: true,
         value: 11,
         url: '../images/aceSpades.png'
       },
       {
         cardName: 'aceDiamond',
+        ace: true,
         value: 11,
         url: '../images/aceD.png'
       },
@@ -201,62 +205,62 @@ const cards = [
       },
       {
         cardName: 'jackClub',
-        value: 11,
+        value: 10,
         url: '../images/jackClubs.png'
       },
       {
         cardName: 'jackHeart',
-        value: 11,
+        value: 10,
         url: '../images/jackHearts.png'
       },
       {
         cardName: 'jackSpade',
-        value: 11,
+        value: 10,
         url: '../images/jackSpades.png'
       },
       {
         cardName: 'jackDiamond',
-        value: 11,
+        value: 10,
         url: '../images/jackD.png'
       },
       {
         cardName: 'queenClub',
-        value: 12,
+        value: 10,
         url: '../images/queenClubs.png'
       },
       {
         cardName: 'queenHeart',
-        value: 12,
+        value: 10,
         url: '../images/queenHearts.png'
       },
       {
         cardName: 'queenSpade',
-        value: 12,
+        value: 10,
         url: '../images/queenSpades.png'
       },
       {
         cardName: 'queenDiamond',
-        value: 12,
+        value: 10,
         url: '../images/queenD.png'
       },
       {
         cardName: 'kingClub',
-        value: 13,
+        value: 10,
         url: '../images/kingClubs.png'
       },
       {
         cardName: 'kingHeart',
-        value: 13,
+        value: 10,
         url: '../images/kingHearts.png'
       },
       {
         cardName: 'kingSpade',
-        value: 13,
+        value: 10,
         url: '../images/kingSpades.png'
       },
       {
         cardName: 'kingDiamond',
-        value: 13,
+        value: 10,
         url: '../images/kingD.png'
       }
 ]
