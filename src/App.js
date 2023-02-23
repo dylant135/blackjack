@@ -3,6 +3,7 @@ import './App.css';
 import cards from './components/cards';
 import Home from './components/Home';
 import Game from './components/Game';
+import End from './components/End';
 
 function App() {
   const [page, setPage] = useState('home')
@@ -21,6 +22,10 @@ function App() {
     setComputerCards(() => theCards.slice(2, 4))
   }
 
+  function endGame() {
+    setPage('end')
+  }
+
     
   return (
     <div className="App">
@@ -36,6 +41,11 @@ function App() {
         computerScore={computerScore}
         setPlayerScore={setPlayerScore}
         setComputerScore={setComputerScore}
+        endGame={endGame}
+      />}
+      {page === 'end' && <End
+        playerScore={playerScore}
+        computerScore={computerScore}
       />}
     </div>
   );
