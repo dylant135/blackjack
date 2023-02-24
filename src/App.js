@@ -26,6 +26,10 @@ function App() {
     setPage('end')
   }
 
+  function newGame() {
+    window.location.reload()
+  }
+
     
   return (
     <div className="App">
@@ -40,11 +44,13 @@ function App() {
         computerScore={computerScore}
         setPlayerScore={setPlayerScore}
         setComputerScore={setComputerScore}
+        page={page}
         endGame={endGame}
       />}
       {page === 'end' && <End
         playerScore={playerScore}
         computerScore={computerScore}
+        newGame={newGame}
       />}
     </div>
   );

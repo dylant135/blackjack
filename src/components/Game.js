@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 export default function Game(props) {
     const [deck, setDeck] = useState(props.theCards)
     const [turn, setTurn] = useState('player')
-    
     //remove cards in play from deck
     useEffect(() => {
         let newDeck = [...deck]
@@ -19,6 +18,7 @@ export default function Game(props) {
         return <img src={c.url} alt={c.cardName} key={c.cardName} />
     })
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     function hit() {
         let newDeck = [...deck]
         const newCard = newDeck.shift()
@@ -34,6 +34,7 @@ export default function Game(props) {
         calculateScore()
     }, [deck])
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     function call() {
         if(turn === 'computer') {
             props.endGame()
@@ -106,12 +107,28 @@ export default function Game(props) {
         }
     }
 
+    //computer AI
+    useEffect(() => {
+        if(turn === 'computer' & props.page === 'game') {
+            const timeout = setTimeout(() => {
+                if(props.computerScore < 16) {
+                    hit()
+                } else {
+                    call()
+                }
+              }, 3000)
+          
+              return () => clearTimeout(timeout)
+        }
+    }, [call, hit, props.computerScore, props.page, turn])
+    
+
     return (
         <div className="game">
-            <h2>{turn}'s Turn</h2>
+            <h1>{turn}'s Turn</h1>
             <div className="buttonContainer">
-                <button onClick={call}>Call</button>
-                <button onClick={hit}>Hit</button>
+                <button disabled={turn === 'computer'} onClick={call}>Call</button>
+                <button disabled={turn === 'computer'} onClick={hit}>Hit</button>
             </div>
             <h3>Player Cards</h3>
             <div className="cardContainer">{playerImgs}</div>

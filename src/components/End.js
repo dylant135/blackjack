@@ -33,6 +33,7 @@ export default function End(props) {
             <h3>Player Score: {props.playerScore}</h3>
             <h3>Computer Score: {props.computerScore}</h3>
             <h3>The winner is {winner}</h3>
+            <button onClick={props.newGame}>Play again</button>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -40,8 +41,9 @@ button:hover {
   text-align: center;
 }
 
-.buttonContainer {
+.buttonContainer, .end {
   width: 80vw;
   margin: auto;
   text-align: center;
 }
+
