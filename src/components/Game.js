@@ -15,6 +15,9 @@ export default function Game(props) {
     const playerImgs = props.playerCards.map(c => {
         return <img src={c.url} alt={c.cardName} key={c.cardName} />
     })
+    const computerImgs = props.computerCards.map(c => {
+        return <img src={c.url} alt={c.cardName} key={c.cardName} />
+    })
 
     function hit() {
         let newDeck = [...deck]
@@ -105,10 +108,15 @@ export default function Game(props) {
 
     return (
         <div className="game">
-            <h1>Game</h1>
-            <button onClick={call}>Call</button>
-            <button onClick={hit}>Hit</button>
-            {playerImgs}
+            <h2>{turn}'s Turn</h2>
+            <div className="buttonContainer">
+                <button onClick={call}>Call</button>
+                <button onClick={hit}>Hit</button>
+            </div>
+            <h3>Player Cards</h3>
+            <div className="cardContainer">{playerImgs}</div>
+            <h3>Computer Cards</h3>
+            <div className="cardContainer">{computerImgs}</div>
         </div>
     )
 }

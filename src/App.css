@@ -3,6 +3,45 @@
   padding: 0;
 }
 
-h1, h3 {
+body {
+  background-color: #35654d;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.home {
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+  padding: 5px;
+  min-width: 100px;
+  margin: 5px;
+  font-size: 1.2em;
+  background-color: #354365;
+}
+
+img {
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #62ba8e;
+  cursor: pointer;
+}
+
+.cardContainer {
+  width: 95vw;
+  margin: auto;
+  text-align: center;
+}
+
+.buttonContainer {
+  width: 80vw;
+  margin: auto;
   text-align: center;
 }

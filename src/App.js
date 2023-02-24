@@ -29,7 +29,6 @@ function App() {
     
   return (
     <div className="App">
-      <h1>BlackJack</h1>
       {page === 'home' && <Home startGame={startGame} />}
       {page === 'game' && <Game
         theCards={theCards}
